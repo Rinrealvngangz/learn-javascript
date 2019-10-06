@@ -138,7 +138,7 @@ let age6 =year.map(el => 2016 - el);
  //var age = john[1];
 
  //ES6
- const [name,age] =['john',26];
+ /*const [name,age] =['john',26];
  console.log(name);
  console.log(age);
 
@@ -163,4 +163,32 @@ function calcAgeretirement(year){
 const [age2,retirement]=calcAgeretirement(1996);
 
 console.log(age2);
-console.log(retirement);
+console.log(retirement);*/
+
+//lecture :  Spread Operator
+
+function addFourAges(a,b,c,d){
+    return a+b+c+d;
+}
+var sum1 = addFourAges(18,30,12,21);
+
+console.log(sum1);
+
+//ES5
+var ages =[18,30,12,21];
+var sum2 = addFourAges.apply(null,ages);
+ console.log(sum2);
+
+ //ES6
+
+ const sum3 = addFourAges(...ages)
+ console.log(sum3);
+
+ const familySmith  =['John','Jane','Mark'];
+ const familyMiller =['Mary','Bob','Ann'];
+
+ const bigfamily = [...familySmith, ...familyMiller];
+
+ console.log(bigfamily);
+
+ 

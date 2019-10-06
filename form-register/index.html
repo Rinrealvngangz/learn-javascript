@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js">  </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <title>Đăng ký</title>
+</head>
+<body>
+    
+        <form class="form-all">
+            <h1>Sign up</h1>
+            <div class="public">
+                    <input type="text" id="First-name" required >
+                    <span data-palaceholder="First name" ></span>
+            </div> 
+            <div class="public">
+                    <input type="text" id="last-name" required >
+                    <span data-palaceholder="Last name" ></span>
+            </div> 
+            <div class="public">
+                    <input type="email" id="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$"required>
+                    <span data-palaceholder="E-mail" ></span>
+            </div> 
+            <div class="public">
+                    <input type="text"  id="password" required>
+                    <span data-palaceholder="Password" ></span>
+            </div> 
+            <div class="public">
+                    <input type="text"  id="confpass" required>
+                    <span data-palaceholder="Confirm Password" ></span>
+                   
+            </div> 
+            <div id="confirm-er" class="err-pass"></div>
+            <div class="btn">
+                <input id="btnid" type="submit" value="Register" onclick="check()">
+          
+            </div>
+         
+       </form>
+     <script type="text/javascript">
+     $(".public input").on("focus" ,(function(){
+             $(this).addClass("focus");
+     }));
+        
+         window.onbeforeunload=function() {
+         
+            return '';
+      }
+     </script>
+  
+
+
+
+
+</body>
+</html>

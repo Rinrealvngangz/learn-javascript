@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js">  </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <title>Đăng nhập</title>
+</head>
+
+<body>
+ 
+        <p id="userlogin">User Login </p>
+    <div class="from-login">
+        <form class="form-all">
+           
+        <div class="display">
+            <p id="login"> Login now </p>
+        <div class="formgroup">
+ 
+            <i class="fas fa-user" id="icon"></i>
+                <input type="text" class="form" id="us" name="username" placeholder="Username">
+            
+        </div></br>
+        <div class="formgroup">
+               <i  class="fas fa-lock-open" id="icon"></i>
+             <div class="fafa"> <i  class="fas fa-eye"   id="eye" onclick="ope()"></i> 
+           </div> 
+         
+                <i style="display: none" class="far fa-eye-slash" id="icon-slash" onclick="clo()"></i>
+          
+                <input type="password" class="form" id="ps" name="password1"  placeholder="Password">
+        </div>
+      
+         <div id="container">
+             
+             <p id="questions">New user ? <a href="file:///C:/Users/Tuan/Desktop/form-register/index.html" >Register here</a> 
+                <p>Forgot Password ?  <a href="#" >Click here</a>
+                </p></p>
+              
+           
+           <input type="button" class="bt" name = "button" value="Login" onclick="alter()">
+         
+           <p id="or-login">Or login with <a id="fb" href="https://www.facebook.com/?stype=lo&jlou=AfegWcxkgsmyQYLenWIgttvc9RXZFIjic1T1-aOU6fi7XitPiZGgoU1kfFOChRLT7aB-yo_yrQORe0SenzNVrAf-Kb8-ydrH5o1JEQ8UJymGPQ&smuh=39650&lh=Ac-X8SvZPBF6FhPU"><i class="fab fa-facebook"></i></a></p>
+           
+        
+        </div>
+    </div>
+        </form>
+        <div id="last">  <p>&#169 2019 User login.All right reserved | Design by<a href="#"> Rin</a>
+        </p></div>
+      
+        
+    </div>
+
+
+
+</body>
+
+</html>
