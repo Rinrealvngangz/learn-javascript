@@ -167,7 +167,7 @@ console.log(retirement);*/
 
 //lecture :  Spread Operator
 
-function addFourAges(a,b,c,d){
+/*function addFourAges(a,b,c,d){
     return a+b+c+d;
 }
 var sum1 = addFourAges(18,30,12,21);
@@ -189,6 +189,77 @@ var sum2 = addFourAges.apply(null,ages);
 
  const bigfamily = [...familySmith, ...familyMiller];
 
- console.log(bigfamily);
+ console.log(bigfamily);*/
 
- 
+ // lecture : rest parameters
+ //ES5
+ /*function isfullage5(limit){
+   //  console.log(arguments)
+     var argsArr = Array.prototype.slice.call(arguments,1);
+     argsArr.forEach(function(cur){
+         
+        console.log(2016- cur >= limit);
+     
+         
+     });
+ }
+ isfullage5(16,1990,1999,1965);*/
+//ES6
+/*function isfullage6(limit,...years)
+{
+    years.forEach(cur => console.log((2016-cur) >=limit)
+
+    )
+
+}
+isfullage6(16,1990,1999,1965);*/
+
+//lecture : Default Parameters
+
+//ES5
+/*function SmithPerson(firstname, yearofBirth,lastName,nationality){
+    lastName === undefined ? lastName ='Smith' : lastName = lastName;
+    nationality === undefined ? nationality ='American' : nationality = nationality;
+
+    this.firstname = firstname;
+    this.yearofBirth = yearofBirth;
+    this.lastName = lastName;
+    this.nationality = nationality;
+
+}*/
+//ES6
+/*function SmithPerson(firstname, yearofBirth,lastName ='smith',nationality='American'){
+    this.firstname = firstname;
+    this.yearofBirth = yearofBirth;
+    this.lastName = lastName;
+    this.nationality = nationality;
+
+}
+var john = new SmithPerson ('John',1990);*/
+
+// lecture:Maps
+
+const question = new Map();
+question.set('question','What is the official name of the lateste major Js version?');
+question.set(1,'ES5');
+question.set(2,'ES6');
+question.set(3,'ES2015');
+question.set(4,'ES7');
+question.set('correct',3);
+question.set(true,'Correct answer :D');
+question.set(false,'Wrong,please try again!');
+console.log(question.get('question'));
+if(question.has(4)){
+  //  question.delete(4);
+}
+//question.clear();
+
+/*question.forEach((value,key)=>
+    console.log(`this is ${key}, it's set to ${value}`));*/
+
+ for(let[key,value] of question.entries()){
+     if(typeof(key) =='number')
+    console.log(`Answer ${key} : ${value}`);
+ }
+ const ans = parseInt(prompt('Write the correct  answer '));
+ console.log(question.get(ans === question.get('correct')));
